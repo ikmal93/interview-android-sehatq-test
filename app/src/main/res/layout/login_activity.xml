@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_root_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.login.LoginActivity">
+
+    <TextView
+        android:id="@+id/login_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/login_side_margin"
+        android:layout_marginTop="@dimen/login_margin_title_top"
+        android:layout_marginEnd="@dimen/login_side_margin"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/login_title"
+        android:textSize="@dimen/login_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_google_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/login_btn"
+        android:layout_marginStart="@dimen/login_side_margin"
+        android:layout_marginTop="@dimen/login_margin_btn_top"
+        android:layout_marginEnd="@dimen/login_side_margin"
+        android:backgroundTint="@color/redGoogle"
+        android:text="@string/login_google"
+        android:textSize="@dimen/login_btn_text"
+        app:backgroundTint="@color/redGoogle"
+        app:icon="@drawable/ic_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_facebook_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/login_btn"
+        android:layout_marginStart="@dimen/login_side_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/login_side_margin"
+        android:backgroundTint="@color/blueFacebook"
+        android:text="@string/login_facebook"
+        android:textSize="@dimen/login_btn_text"
+        app:backgroundTint="@color/blueFacebook"
+        app:icon="@drawable/ic_facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_google_btn" />
+
+    <TextView
+        android:id="@+id/login_or_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/login_or"
+        app:layout_constraintEnd_toEndOf="@+id/login_facebook_btn"
+        app:layout_constraintStart_toStartOf="@+id/login_facebook_btn"
+        app:layout_constraintTop_toBottomOf="@+id/login_facebook_btn" />
+
+    <View
+        android:id="@+id/login_view_left"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/login_side_margin"
+        android:layout_marginEnd="16dp"
+        android:background="@color/view"
+        app:layout_constraintBottom_toBottomOf="@+id/login_or_label"
+        app:layout_constraintEnd_toStartOf="@+id/login_or_label"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_or_label" />
+
+    <View
+        android:id="@+id/login_view_right"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="@dimen/login_side_margin"
+        android:background="@color/view"
+        app:layout_constraintBottom_toBottomOf="@+id/login_or_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/login_or_label"
+        app:layout_constraintTop_toTopOf="@+id/login_or_label" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_username_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/login_side_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/login_side_margin"
+        app:hintTextAppearance="@style/Hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_or_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_username_tie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans"
+            android:hint="@string/login_username_hint"
+            android:textSize="@dimen/login_form_text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_password_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/login_side_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/login_side_margin"
+        app:hintTextAppearance="@style/Hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_username_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_password_tie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:textSize="@dimen/login_form_text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_sign_in_btn"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/login_btn"
+        android:layout_marginStart="@dimen/login_side_margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/login_side_margin"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/login_button"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_til"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
